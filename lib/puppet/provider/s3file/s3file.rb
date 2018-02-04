@@ -1,8 +1,11 @@
-require 'aws-sdk-s3'
+require 'aws-sdk-s3' if Puppet.features.awssdks3?
 require 'digest'
 require 'fileutils'
 
 Puppet::Type.type(:s3file).provide(:s3file) do
+
+  confine :feature => :awssdks3
+
   def latest?
     notice "check  aws"
     s3 = Aws::S3::Resource.new(region: resource[:region])
