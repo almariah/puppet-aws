@@ -1,5 +1,14 @@
 Puppet::Type.newtype(:s3file) do
-  @doc = "Copy file from AWS S3 bucket."
+  desc <<-DESC
+Copy file from AWS S3 bucket.
+@example Using the type.
+  s3file {'/tmp/file.txt':
+    ensure => present,
+    object => '/example/file.txt',
+    bucket => "example-bucket",
+    region => 'us-east-1'
+  }
+DESC
 
   def exists?
     @provider.get(:ensure) != :absent
