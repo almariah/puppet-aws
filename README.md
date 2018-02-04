@@ -4,7 +4,7 @@
 
 ## Usage
 
-The Type will searches the following locations for credentials:
+The module will searches the following locations for credentials:
 
 * ENV['AWS_ACCESS_KEY_ID'] and ENV['AWS_SECRET_ACCESS_KEY']
 * The shared credentials ini file at ~/.aws/credentials.
