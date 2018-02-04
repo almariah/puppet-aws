@@ -55,9 +55,7 @@ Puppet::Type.newtype(:s3file) do
   end
 
   newparam(:object) do
-    desc "The weekday on which to run the command.
-    Optional; if specified, must be between 0 and 7, inclusive, with
-    0 (or 7) being Sunday, or must be the name of the day (e.g., Tuesday)."
+    desc "The key name that you assign to an AWS S3 object."
 
     munge do |value|
       if value.start_with?('/')
@@ -69,9 +67,7 @@ Puppet::Type.newtype(:s3file) do
   end
 
   newparam(:path, :namevar => true) do
-    desc "The weekday on which to run the command.
-    Optional; if specified, must be between 0 and 7, inclusive, with
-    0 (or 7) being Sunday, or must be the name of the day (e.g., Tuesday)."
+    desc "The path to the file to manage. Must be fully qualified."
 
     validate do |value|
       unless Puppet::Util.absolute_path?(value)
