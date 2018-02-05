@@ -3,12 +3,12 @@
 ## Overview
 
 To install the module:
-```bash
+```
 puppet module install almariah-aws
 ```
 
 Also, you will need `aws-sdk-s3` ruby gem dependency on the server where the `s3file` type is applied. You can use package type with gem provider to install it or use:
-```shell
+```
 gem install aws-sdk-s3
 ```
 
