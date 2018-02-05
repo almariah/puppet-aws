@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "source": "https://github.com/almariah/puppet-aws",
   "project_page": "https://github.com/almariah/puppet-aws",
-  "issues_url": "https://github.com/voxpupuli/puppet-aws",
+  "issues_url": "https://github.com/almariah/puppet-aws/issues",
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",

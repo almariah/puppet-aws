@@ -41,7 +41,7 @@ s3file {'/tmp/file.txt':
 
 package {'aws-sdk-s3':
   ensure    => present,
-  provider => gem
+  provider  => gem
 }
 ```
 
