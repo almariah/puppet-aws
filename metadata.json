@@ -1,6 +1,6 @@
 {
   "name": "almariah-aws",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Abdullah Almariah",
   "summary": "This module fetch files from AWS S3 on Linux systems",
   "license": "Apache-2.0",
