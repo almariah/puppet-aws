@@ -61,6 +61,8 @@ DESC
 
   newparam(:region) do
     desc "The AWS region for the S3 bucket."
+
+    defaultto 'us-east-1'
   end
 
   newparam(:object) do

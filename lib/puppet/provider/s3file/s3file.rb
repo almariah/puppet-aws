@@ -28,6 +28,10 @@ Puppet::Type.type(:s3file).provide(:s3file) do
   end
 
   def create
+
+    fail("S3 bucket parameter is missing.") if resource[:bucket].nil?
+    fail("S3 object parameter is missing.") if resource[:object].nil?
+
     if !exists?
       $s3_obj = getObject
     end
