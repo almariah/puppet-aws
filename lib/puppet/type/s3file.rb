@@ -30,6 +30,7 @@ DESC
       provider.create
     end
 
+    # Needs revisit
     def insync?(is)
       @should.each { |should|
         case should
@@ -46,6 +47,7 @@ DESC
       }
     end
 
+    # Needs revisit
     def retrieve
       if @should.include?(:latest)
         return :latest if provider.latest? and provider.exists?
