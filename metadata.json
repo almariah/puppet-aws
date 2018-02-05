@@ -2,7 +2,7 @@
   "name": "almariah-aws",
   "version": "0.1.0",
   "author": "Abdullah Almariah",
-  "summary": "This module get files from AWS S3 on Linux systems",
+  "summary": "This module fetch files from AWS S3 on Linux systems",
   "license": "Apache-2.0",
   "source": "https://github.com/almariah/puppet-aws",
   "project_page": "https://github.com/almariah/puppet-aws",
