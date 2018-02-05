@@ -80,7 +80,7 @@ DESC
 
     validate do |value|
       unless Puppet::Util.absolute_path?(value)
-        fail Puppet::Error, ("File paths must be fully qualified, not '%{path}'") % { path: value }
+        fail Puppet::Error, ("File paths must be fully qualified, not '%{path}'") % { :path => value }
       end
     end
   end

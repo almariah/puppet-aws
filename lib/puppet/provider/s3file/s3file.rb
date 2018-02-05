@@ -31,7 +31,7 @@ Puppet::Type.type(:s3file).provide(:s3file) do
     if !exists?
       $s3_obj = getObject
     end
-    $s3_obj.get(response_target: resource[:path])
+    $s3_obj.get(:response_target => resource[:path])
   end
 
   def update
@@ -44,7 +44,7 @@ Puppet::Type.type(:s3file).provide(:s3file) do
 
   def getObject
     notice "connecting to AWS"
-    s3 = Aws::S3::Resource.new(region: resource[:region])
+    s3 = Aws::S3::Resource.new(:region => resource[:region])
     return s3.bucket(resource[:bucket]).object(resource[:object])
   end
 end
